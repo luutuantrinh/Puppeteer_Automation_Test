@@ -26,22 +26,14 @@ describe('Currency Exchange Test', () => {
         await page.type('#user_login', 'username');
         await page.type('#user_password', 'password');
         await page.click('input[type="submit"]');
-        await page.goto('http://zero.webappsecurity.com/bank/pay-bills.html');
+        
         console.log('---------------------------------------Login to Application');
     });
 
-    it('Display Currency Exchange Form', async () => {
-        await page.click('#ui-tabs-3');
-        await page.waitForSelector('.board');
-        console.log('---------------------------------------Display Currency Exchange Form');
-    })
-
     // đang lỗi
     it('Exchange Currency', async () => {
-        await page.goto('http://zero.webappsecurity.com/bank/pay-bills.html');
-        await page.waitForXPath('/html/body/div[1]/div[2]/div/div[2]/div/div/div[2]/ul/li[3]/a');
-        const link = await page.$x('/html/body/div[1]/div[2]/div/div[2]/div/div/div[2]/ul/li[3]/a');
-        await link[0].click();
+        await page.goto('http://zero.webappsecurity.com/bank/pay-bills.html#ui-tabs-3');
+        await page.waitForSelector('#pc_currency');
         await page.select('#pc_currency', 'GBP');
         await page.type('#pc_amount', '800');
         await page.click('#pc_inDollars_true');
