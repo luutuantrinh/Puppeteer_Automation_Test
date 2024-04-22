@@ -31,6 +31,7 @@ describe('Device Emulation Test', () => {
     });
 
 
+    // Đang lỗi
     it('Tablet device test', async () => {
         const tablet = devices['iPad landscape']; // Set device là iPad landscape
         await page.emulate(tablet); // Emulate device
@@ -38,6 +39,7 @@ describe('Device Emulation Test', () => {
         await page.setDefaultTimeout(5000); // Set timeout cho page;
     });
 
+    // Đang lỗi
     it('Mobile device test', async () => {
         const mobile = devices['iPhone X'] // Set device là iPhone X
         await page.emulate(mobile); // Emulate device

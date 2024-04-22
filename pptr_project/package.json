@@ -4,8 +4,9 @@
   "description": "My First Automated Test Software with Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout=30000 ./tests/exampleElementNotExist.test",
-    "test:device": "mocha --timeout=30000 ./tests/exampleDeviceEmulations.test"
+    "test": "mocha --timeout=30000 ./tests/exampleExtendPuppeteerWithCustomCommands.test",
+    "test:device": "mocha --timeout=30000 ./tests/exampleLaunchIncognitoBrowser.test",
+    "test:e2e": "mocha --timeout=30000 ./tests/e2e/currency-exchange.test"
   },
   "keywords": [
     "Puppeteer",
