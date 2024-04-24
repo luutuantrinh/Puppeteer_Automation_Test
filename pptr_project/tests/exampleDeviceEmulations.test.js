@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
-const devices = puppeteer.devices;
+const KnownDevices = puppeteer.KnownDevices // thư viện này chứa các thiết bị đã biết
+const Galaxy = KnownDevices['Galaxy Note 3']; // thiết bị Galaxy Note 3
 
 describe('Device Emulation Test', () => {
     let browser;
@@ -41,8 +42,7 @@ describe('Device Emulation Test', () => {
 
     // Đang lỗi
     it('Mobile device test', async () => {
-        const mobile = devices['iPhone X'] // Set device là iPhone X
-        await page.emulate(mobile); // Emulate device
+        await page.emulate(Galaxy); // mô phỏng thiết bị Galaxy Note 3
         await page.setDefaultTimeout(5000); // Set timeout cho page;
     });
 });
