@@ -1,6 +1,6 @@
 export default class BasePage {
     async wait(time) {
-        await page.waitFor(time);
+        await new Promise(resolve => setTimeout(resolve, time));
     }
 
     async getTitle() {

@@ -1,7 +1,7 @@
 import BasePage from './BasePage';
 export default class HomePage extends BasePage {
     async visit() {
-        await page.goto('http://zero.webappsecurity.com/index.html');
+        await page.goto('http://zero.webappsecurity.com/index.html', { timeout: 30000 });
         await page.waitForSelector('#signin_button'); // chờ nav id xuất hiện
     }
 
@@ -23,4 +23,5 @@ export default class HomePage extends BasePage {
     async clickFeedbackLink() {
         await page.click('#feedback');
     }
+    
 }
