@@ -1,23 +1,17 @@
 const puppeteer = require('puppeteer'); 
 const { expect } = require('chai'); // Chai: thư viện test assertion
 const { step } = require('mocha-steps');
+const Page = require('../builder');
 
-describe('Mocha steps demo', () => {
-    let browser;
+describe('Mocha steps demo framework', () => {
     let page;
 
     before(async function() {
-        browser = await puppeteer.launch({
-            headless: false,
-            slowMo: 10,
-            devtools: false
-        });
-        page = await browser.newPage();
-        await page.setDefaultTimeout(10000);
+        page = await Page.build('Desktop'); // Mở trang mới với thiết lập Desktop
     });
 
     after(async function() {
-        await browser.close();
+        await page.close();
     });
 
     step('should load google homepage', async function() {
@@ -28,8 +22,12 @@ describe('Mocha steps demo', () => {
         expect(url).to.include('google.com');
     });
 
-    step('step 2 should fail', async function() {
-        await page.waitForSelector('wrongselector');
-    });
+    // step('step 2 should fail', async function() {
+    //     await page.waitForSelector('wrongselector');
+    // });
+
+
 
 });
+
+// Noty use it : ref : https://stackoverflow.com/questions/72805454/typeerror-cannot-read-private-member-from-an-object-whose-class-did-not-declare

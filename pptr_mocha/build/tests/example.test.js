@@ -1,5 +1,7 @@
-describe('Example test ', () => {
-    it('should test consolelog config', () => {
-        console.log('Hello World Build Test');
+'use strict';
+
+describe('Example test', function () {
+    it('should test consolelog source test', function () {
+        console.log('Hello World Source Test');
     });
 });
