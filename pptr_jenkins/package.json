@@ -1,0 +1,24 @@
+{
+  "name": "pptr_jenkins",
+  "version": "1.0.0",
+  "description": "CI / CD with puppeteer and Jenkins",
+  "main": "index.js",
+  "scripts": {
+    "e2e-test": "mocha --timeout 30000 --require esm tests/e2e.test.js",
+    "smoke-test": "mocha --timeout 30000 --require esm tests/smoke.test.js",
+    "start-jenkins-server": "java -jar jenkins.war -httpPort=8080 --enable-future-java"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Jenkins"
+  ],
+  "author": "KO",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
+    "puppeteer": "^22.7.1"
+  }
+}
