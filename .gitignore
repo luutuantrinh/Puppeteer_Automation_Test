@@ -3,3 +3,6 @@
 /jest-pptr-project/node_modules
 /pptr_mocha/node_modules
 /pptr_cucumber/node_modules
+/pptr_codecept/node_modules
+/pptr_jenkins/node_modules
+/pptr_tips/node_modules
