@@ -4,7 +4,7 @@
   "description": "Puppeteer Tips",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 30000 --require esm tests/example.test.js",
+    "test": "mocha --timeout 30000 --require esm tests/**.js",
     "clean": "rmdir /s /q build || del /s /q build",
     "build": "babel --presets es2015 -d ./build ./tests"
   },
@@ -19,5 +19,6 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1"
-  }
+  },
+  "type": "module"
 }

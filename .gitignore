@@ -6,3 +6,5 @@
 /pptr_codecept/node_modules
 /pptr_jenkins/node_modules
 /pptr_tips/node_modules
+/pptr_tips_es6/node_modules
+/jest-pptr/node_modules
